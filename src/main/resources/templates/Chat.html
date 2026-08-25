@@ -2,11 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Realtime chat</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Realtime Chat</title>
+
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+    >
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7.3.0/bundles/stomp.umd.min.js"></script>
 </head>
+
 <body>
-<h1>real time chat application</h1>
+
+<div class="container mt-4">
+
+    <h1 class="text-center mb-4">
+        Real Time Chat Application
+    </h1>
+
+    <!-- Name Section -->
+    <div class="mb-3">
+        <label for="nameInput" class="form-label">
+            Your Name
+        </label>
+
+        <input
+                id="nameInput"
+                type="text"
+                class="form-control"
+                placeholder="Enter your name"
+        >
+    </div>
+
+    <!-- Chat Section -->
+    <div
+            id="chat"
+            class="border rounded mb-3 p-3"
+            style="height: 400px; overflow-y: auto;"
+    >
+        <!-- Messages will appear here -->
+    </div>
+
+    <!-- Message Input -->
+    <div class="input-group mb-3">
+
+        <input
+                id="messageInput"
+                type="text"
+                class="form-control"
+                placeholder="Type a message..."
+        >
+
+        <button
+                id="sendMessage"
+                class="btn btn-primary"
+                type="button"
+        >
+            Send
+        </button>
+
+    </div>
+
+</div>
+
 </body>
+
+<script>
+
+</script>
+
+
 </html>
