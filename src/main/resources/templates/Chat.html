@@ -72,6 +72,12 @@
 </body>
 
 <script>
+    function(){
+    var socket = new SockJS('/chat');
+    stompClient = Stomp.over(socket);
+    stompClient.connect({},function(frame)){
+        setConnected(true);
+    })
 
 </script>
 
