@@ -72,12 +72,20 @@
 </body>
 
 <script>
+
+    function setConnected(connected){
+    document.getElementById('sendMessage').disabled = !connected;
+    }
     function(){
     var socket = new SockJS('/chat');
     stompClient = Stomp.over(socket);
     stompClient.connect({},function(frame)){
         setConnected(true);
+        stompClient.subscribe('/topic/messages',function(message){
+        showMessage(JSON.prase(message.body));
+        });
     })
+    }
 
 </script>
 
