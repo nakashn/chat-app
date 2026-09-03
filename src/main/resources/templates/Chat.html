@@ -95,7 +95,13 @@
         chat.scrollTop = chat.scrollHeight;
     }
     function sendMessage(message){
-    var Sender = document.getElementById('messageInput')
+    var Sender = document.getElementById('senderInput').value;
+    var content = document.getElementById('messageInput').value;
+
+    var chatMessage = {
+        sender:sender,
+        content:content
+    }
     }
 
 </script>
